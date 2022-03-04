@@ -4,7 +4,38 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:07:14
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-04 11:04:54
+ * @LastEditTime: 2022-03-04 14:11:19
 -->
-<p>{{ userName }}{{ title }}</p>
-<p [title]="userName">我是一个p标签</p>
+<div class="root">
+  <div class="demo1">
+    <h2>1.循环数据显示数据的索引</h2>
+    <ul>
+      <li *ngFor="let item of newsList; let key = index">
+        <span [class]="key === 1 ? 'red' : ''">
+          {{ key + 1 }} {{ item.title }}
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="demo2">
+    <h2>2.条件判断语句</h2>
+    <img src="assets/images/home/cat.png" alt="" *ngIf="flag == true" />
+  </div>
+
+  <div class="ng-switch">
+    <h2>3.switch条件判断</h2>
+    <span [ngSwitch]="orderStatus">
+      <p *ngSwitchCase="1">表示已经支付</p>
+      <p *ngSwitchCase="2">已经支付并且确认订单</p>
+      <p *ngSwitchCase="3">表示已经发货</p>
+      <p *ngSwitchCase="4">已经没有货了</p>
+    </span>
+  </div>
+
+  <div class="demo4">
+    <h2>3.[*ngClass] [*ngStyle]</h2>
+    <p [ngClass]="{ red: flag, blue: !flag }">[*ngClass演示]</p>
+    <p [ngStyle]="{ color: red, fontSize: '12px' }">[*ngStyle演示]</p>
+  </div>
+</div>

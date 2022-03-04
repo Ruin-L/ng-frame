@@ -4,16 +4,14 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 16:48:51
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-04 10:29:19
+ * @LastEditTime: 2022-03-04 15:50:01
  */
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { PagesModule } from '../pages/pages.module';
-import { ComponentsModule } from '../components/components.module';
-
+import { NgModule } from "@angular/core";
+import { PagesModule } from "../pages/pages.module";
+import { ComponentsModule } from "../components/components.module";
 @NgModule({
   declarations: [],
-  imports: [CommonModule, PagesModule, ComponentsModule],
+  imports: [PagesModule, ComponentsModule],
   exports: [PagesModule, ComponentsModule],
 })
 export class CoreModule {}

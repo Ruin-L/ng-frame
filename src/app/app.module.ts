@@ -4,18 +4,18 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 16:21:23
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-04 10:09:24
+ * @LastEditTime: 2022-03-04 15:49:55
  */
 // 引入核心模块
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
 // 引入浏览器解析模块
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from "@angular/platform-browser";
 // 引入路由模块
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from "./app-routing.module";
 // 引入根组件
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 // @ngModule装饰器 @ngModule接受一个元数据对象 告诉angular如何编译和启动对象\
-import { CoreModule } from './core/core.module';
+import { CoreModule } from "./core/core.module";
 
 @NgModule({
   declarations: [AppComponent], //配置项目运行的组件

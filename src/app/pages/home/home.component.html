@@ -4,10 +4,24 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:06:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-04 10:53:57
+ * @LastEditTime: 2022-03-04 15:53:16
 -->
 <p>home works!</p>
-<app-head></app-head>
-<app-news></app-news>
-<app-list></app-list>
-<app-body></app-body>
+<!-- <app-news></app-news> -->
+<!-- <app-head></app-head> -->
+<!-- <app-news></app-news> -->
+<!-- <app-list></app-list> -->
+<!-- <app-body></app-body> -->
+<div class="root">
+  <div class="container">
+    <div class="w">
+      <h2>双向数据绑定用法(只适用于表单) MVVM</h2>
+      <input type="text" [(ngModel)]="textContent" />
+      <span>{{ textContent }}</span>
+    </div>
+    <div class="changeKey">
+      <button (click)="changeKeyword()">改值</button>
+      <button (click)="getKeyword()">获取值</button>
+    </div>
+  </div>
+</div>

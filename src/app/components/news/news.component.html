@@ -1,1 +1,27 @@
-<p>{{ msg }}</p>
+<!--
+ * @Description: {{ByRuin}}
+ * @Version: 2.0
+ * @Author: Ruin 🍭
+ * @Date: 2022-03-03 16:59:15
+ * @LastEditors: 刘引
+ * @LastEditTime: 2022-03-04 15:34:24
+-->
+<div class="root">
+  <div class="w">
+    <div class="container">
+      <h2>事件的相关用法</h2>
+      <div class="demo">
+        <button (click)="getNum()">执行事件</button>
+        <button (click)="getData()">获取数据</button>
+        <button (click)="setData()">改变数据</button>
+        <button (click)="changeDom($event)">更高按钮颜色</button>
+      </div>
+
+      <div class="demo2">
+        <!-- 传递input输入框中的值 -->
+        <input (keydown)="pressKeyboard($event)" type="text" />
+      </div>
+      <p>{{ msg }}</p>
+    </div>
+  </div>
+</div>

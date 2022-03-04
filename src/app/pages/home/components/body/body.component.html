@@ -4,20 +4,32 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:07:23
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-04 11:30:17
+ * @LastEditTime: 2022-03-04 13:35:29
 -->
-<p>body {{ content }}</p>
-<!-- 渲染html标签 -->
-<span [innerHTML]="content"></span>
-<!-- 进行简单计算 -->
-<span>1+2 = {{ 1 + 2 }}</span>
-<!-- 使用数据 -->
-<hr />
-<div>
-  <head>
-    开始进行数组循环渲染
-  </head>
-  <ul>
-    <li *ngFor="let item of arrList">{{ item }}</li>
-  </ul>
+<div class="root">
+  <p>body {{ content }}</p>
+  <!-- 渲染html标签 -->
+  <span [innerHTML]="content"></span>
+  <!-- 进行简单计算 -->
+  <span>1+2 = {{ 1 + 2 }}</span>
+  <!-- 使用数据 -->
+  <hr />
+  <div>
+    <head>
+      开始进行数组循环渲染
+    </head>
+    <ul>
+      <li *ngFor="let item of arrList">{{ item }}</li>
+    </ul>
+  </div>
+  <hr />
+  <h5>引入图片</h5>
+  <div>
+    <span>引入本地图片</span>
+    <img src="assets/images/home/cat.png" alt="" />
+  </div>
+  <div>
+    <span>引入网络图片</span>
+    <img [src]="picUrl" alt="无法显示" />
+  </div>
 </div>
