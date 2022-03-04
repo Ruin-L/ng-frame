@@ -4,15 +4,16 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 16:48:51
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-03 17:10:50
+ * @LastEditTime: 2022-03-04 10:29:19
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesModule } from '../pages/pages.module';
-// import { }
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, PagesModule],
+  imports: [CommonModule, PagesModule, ComponentsModule],
+  exports: [PagesModule, ComponentsModule],
 })
 export class CoreModule {}

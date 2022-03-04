@@ -1,1 +1,23 @@
-<p>body works!</p>
+<!--
+ * @Description: {{ByRuin}}
+ * @Version: 2.0
+ * @Author: Ruin 🍭
+ * @Date: 2022-03-03 17:07:23
+ * @LastEditors: 刘引
+ * @LastEditTime: 2022-03-04 11:30:17
+-->
+<p>body {{ content }}</p>
+<!-- 渲染html标签 -->
+<span [innerHTML]="content"></span>
+<!-- 进行简单计算 -->
+<span>1+2 = {{ 1 + 2 }}</span>
+<!-- 使用数据 -->
+<hr />
+<div>
+  <head>
+    开始进行数组循环渲染
+  </head>
+  <ul>
+    <li *ngFor="let item of arrList">{{ item }}</li>
+  </ul>
+</div>

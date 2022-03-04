@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 16:21:23
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-03 17:13:00
+ * @LastEditTime: 2022-03-04 10:09:24
  */
 // 引入核心模块
 import { NgModule } from '@angular/core';
@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // @ngModule装饰器 @ngModule接受一个元数据对象 告诉angular如何编译和启动对象\
 import { CoreModule } from './core/core.module';
+
 @NgModule({
   declarations: [AppComponent], //配置项目运行的组件
   imports: [BrowserModule, AppRoutingModule, CoreModule], //配置当前项目运行依赖的其他模块
