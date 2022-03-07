@@ -4,10 +4,11 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:06:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 08:58:41
+ * @LastEditTime: 2022-03-07 14:51:00
 -->‘
 <!-- <app-news></app-news> -->
-<!-- <app-head></app-head> -->
+
+<app-head #homeHead></app-head>
 <!-- <app-news></app-news> -->
 <!-- <app-list></app-list> -->
 <!-- <app-body></app-body> -->
@@ -22,6 +23,11 @@
     <div class="changeKey">
       <button (click)="changeKeyword()">改值</button>
       <button (click)="getKeyword()">获取值</button>
+    </div>
+
+    <div class="input">
+      <!-- 失去input焦点触发 -->
+      <input type="text" (change)="getContent()" />
     </div>
   </div>
 </div>

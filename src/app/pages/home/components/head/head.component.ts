@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:07:14
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-04 14:10:42
+ * @LastEditTime: 2022-03-07 14:26:59
  */
 import { Component, OnInit } from "@angular/core";
 
@@ -24,6 +24,8 @@ export class HeadComponent implements OnInit {
   public orderStatus: number = 1;
   public red: string = "blue";
   constructor() {}
-
+  testViewChild() {
+    console.log("我是子组件的方法");
+  }
   ngOnInit(): void {}
 }
