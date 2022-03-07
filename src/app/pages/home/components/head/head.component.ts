@@ -4,9 +4,9 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:07:14
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 14:26:59
+ * @LastEditTime: 2022-03-07 16:15:13
  */
-import { Component, OnInit } from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 
 @Component({
   selector: "app-head",
@@ -14,18 +14,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./head.component.scss"],
 })
 export class HeadComponent implements OnInit {
-  public newsList: Array<any> = [
-    { title: "我是新闻1" },
-    { title: "我是新闻2" },
-    { title: "我是新闻3" },
-  ];
-  public flag: boolean = true;
-  //1表示已经支付 2并且确认订单 3表示已经发货 4表示已经收货
-  public orderStatus: number = 1;
-  public red: string = "blue";
+  // 实例化事件广播
+  @Output() private outerInput = new EventEmitter();
   constructor() {}
-  testViewChild() {
-    console.log("我是子组件的方法");
-  }
   ngOnInit(): void {}
+  getSearchData(e: any) {
+    // 发送事件数据
+    this.outerInput.emit("12341234");
+    console.log("方法触发", e.target.value);
+  }
 }

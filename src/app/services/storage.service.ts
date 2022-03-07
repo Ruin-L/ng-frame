@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-07 09:39:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 10:21:29
+ * @LastEditTime: 2022-03-07 15:08:49
  */
 import { Injectable } from "@angular/core";
 
@@ -13,6 +13,7 @@ import { Injectable } from "@angular/core";
 })
 export class StorageService {
   constructor() {}
+  public msg: string = "我是信息";
   getTest() {
     return "this is service";
   }

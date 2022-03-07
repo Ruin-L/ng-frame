@@ -4,30 +4,13 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:06:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 14:51:00
--->‘
-<!-- <app-news></app-news> -->
-
-<app-head #homeHead></app-head>
+ * @LastEditTime: 2022-03-07 16:15:54
+-->
+<app-head (outerInput)="receiveSearchInput($event)"></app-head>
+<hr />
+<div>
+  <p>{{ result }}</p>
+</div>
+<app-body></app-body>
 <!-- <app-news></app-news> -->
 <!-- <app-list></app-list> -->
-<!-- <app-body></app-body> -->
-<p>home works!</p>
-<div class="root">
-  <div class="container">
-    <div class="w">
-      <h2>双向数据绑定用法(只适用于表单) MVVM</h2>
-      <input type="text" [(ngModel)]="textContent" />
-      <span>{{ textContent | json }}</span>
-    </div>
-    <div class="changeKey">
-      <button (click)="changeKeyword()">改值</button>
-      <button (click)="getKeyword()">获取值</button>
-    </div>
-
-    <div class="input">
-      <!-- 失去input焦点触发 -->
-      <input type="text" (change)="getContent()" />
-    </div>
-  </div>
-</div>
