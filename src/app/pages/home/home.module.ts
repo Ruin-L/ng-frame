@@ -4,20 +4,19 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:06:01
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 16:58:46
+ * @LastEditTime: 2022-03-09 11:44:08
  */
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+
 import { HomeComponent } from "./home.component";
 import { HeadComponent } from "./components/head/head.component";
 import { BodyComponent } from "./components/body/body.component";
-import { ComponentsModule } from "src/app/components/components.module";
-// 引入双向数据绑定
-import { FormsModule } from "@angular/forms";
 
+// import { AppRoutingModule } from "../../app-routing.module";
+import { PublicModule } from "src/app/universalModel/public.module";
 @NgModule({
   declarations: [HomeComponent, HeadComponent, BodyComponent],
-  imports: [CommonModule, ComponentsModule, FormsModule],
+  imports: [PublicModule],
   exports: [HomeComponent, HeadComponent, BodyComponent],
 })
 export class HomeModule {}

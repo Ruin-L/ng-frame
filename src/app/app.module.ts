@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 16:21:23
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-08 10:53:14
+ * @LastEditTime: 2022-03-09 11:39:39
  */
 // 引入核心模块
 import { NgModule } from "@angular/core";
@@ -15,11 +15,13 @@ import { AppRoutingModule } from "./app-routing.module";
 // 引入根组件
 import { AppComponent } from "./app.component";
 // @ngModule装饰器 @ngModule接受一个元数据对象 告诉angular如何编译和启动对象\
-import { CoreModule } from "./core/core.module";
+import { CoreModule } from "./universalModel/core.module";
+// 在根模块中引入http模块
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent], //配置项目运行的组件
-  imports: [BrowserModule, AppRoutingModule, CoreModule], //配置当前项目运行依赖的其他模块
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule], //配置当前项目运行依赖的其他模块
   providers: [], //配置项目所需要的服务
   bootstrap: [AppComponent], //指定应用的主视图(称为根组件,通过引导AppModule来启动哟应用 这里写的一般是根组件)
 })

@@ -4,21 +4,20 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 16:21:23
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-04 10:52:53
+ * @LastEditTime: 2022-03-09 10:52:56
  */
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { UserComponent } from './pages/user/user.component';
-
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./pages/home/home.component";
+import { UserComponent } from "./pages/user/user.component";
 const routes: Routes = [
   // 路由前面的路径不需要加/
   {
-    path: '',
+    path: "",
     component: HomeComponent,
   },
   {
-    path: 'user',
+    path: "user",
     component: UserComponent,
   },
 ];
