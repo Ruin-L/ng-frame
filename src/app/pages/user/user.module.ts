@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-04 10:42:33
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-09 11:56:39
+ * @LastEditTime: 2022-03-09 13:38:45
  */
 import { NgModule } from "@angular/core";
 import { InfoComponent } from "./components/info/info.component";

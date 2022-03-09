@@ -4,12 +4,13 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:06:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-08 14:38:05
+ * @LastEditTime: 2022-03-09 13:47:01
  */
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { RequestService } from "src/app/services/request.service";
 // 引入服务
 import { StorageService } from "src/app/services/storage.service";
+import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -18,7 +19,12 @@ import { StorageService } from "src/app/services/storage.service";
 export class HomeComponent implements OnInit {
   @ViewChild("homeHead", { static: true }) homeHead: any;
   public result: any = "";
-  constructor(public storage: StorageService, public request: RequestService) {}
+  public key: string = "123";
+  constructor(
+    public storage: StorageService,
+    public request: RequestService,
+    public route: ActivatedRoute
+  ) {}
   // init结尾的函数只会调用一次 checked结尾的函数会多次调用
   // 初始化组件和指令时调用(一般用于请求api)
   ngOnInit(): void {

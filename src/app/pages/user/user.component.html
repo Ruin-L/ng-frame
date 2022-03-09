@@ -4,13 +4,15 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-04 10:45:56
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-09 10:56:33
+ * @LastEditTime: 2022-03-09 13:23:58
 -->
 <p>user works!</p>
 <app-info></app-info>
 <app-mine></app-mine>
 <div class="root">
-  <a routerLink="/">跳转回主页</a>
+  <a routerLink="" routerLinkActive="active">跳转回主页</a>
+
+  <a routerLink="/user" routerLinkActive="active">跳转</a>
   <button (click)="getApiData()">get请求数据</button>
   <button (click)="postUserData()">post增加数据</button>
   <ul>

@@ -4,20 +4,33 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-04 10:45:56
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-08 17:32:59
+ * @LastEditTime: 2022-03-09 13:59:01
  */
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { AxiosService } from "src/app/services/axios.service";
 import { RequestService } from "src/app/services/request.service";
+
 @Component({
   selector: "app-user",
   templateUrl: "./user.component.html",
   styleUrls: ["./user.component.scss"],
 })
 export class UserComponent implements OnInit {
-  constructor(public httpApi: RequestService, public axiosApi: AxiosService) {}
+  constructor(
+    public httpApi: RequestService,
+    public axiosApi: AxiosService,
+    public route: ActivatedRoute
+  ) {}
   public list: any;
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      console.log("路由传过来的参数", params);
+    });
+    // this.route.params.subscribe((params) => {
+    //   console.log("动态路由路径", params);
+    // });
+  }
   // async getApiData() {
   //   try {
   //     let res: any = await this.httpApi.getRequest();

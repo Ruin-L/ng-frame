@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 16:21:23
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-09 10:52:56
+ * @LastEditTime: 2022-03-09 14:00:45
  */
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -19,6 +19,11 @@ const routes: Routes = [
   {
     path: "user",
     component: UserComponent,
+  },
+  // 匹配不到路由时加载的组件或者跳转的路由
+  {
+    path: "**",
+    redirectTo: "",
   },
 ];
 
