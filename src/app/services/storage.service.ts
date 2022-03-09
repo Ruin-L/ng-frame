@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-07 09:39:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 15:08:49
+ * @LastEditTime: 2022-03-07 16:51:22
  */
 import { Injectable } from "@angular/core";
 
@@ -13,25 +13,6 @@ import { Injectable } from "@angular/core";
 })
 export class StorageService {
   constructor() {}
-  public msg: string = "我是信息";
-  getTest() {
-    return "this is service";
-  }
-
-  // 添加缓存
-  setStorage(key: any, value: any) {
-    localStorage.setItem(key, JSON.stringify(value));
-  }
-  // 读取缓存
-  getStorage(key: any): any {
-    return localStorage.getItem(key);
-  }
-  // 删除指定缓存
-  removeStorage(key: any): any {
-    localStorage.removeItem(key);
-  }
-  // 删除所有缓存
-  clearStorage() {
-    localStorage.clear();
-  }
+  // 定义公共数据
+  public inputData: string = "";
 }

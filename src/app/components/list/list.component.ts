@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-04 10:47:32
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 15:13:23
+ * @LastEditTime: 2022-03-07 16:48:12
  */
 import { Component, OnInit } from "@angular/core";
 import { StorageService } from "src/app/services/storage.service";
@@ -20,7 +20,7 @@ export class ListComponent implements OnInit {
     console.log(this.today);
   }
   changeMsg() {
-    this.storage.msg = "我是改变后的值";
+    // this.storage.msg = "我是改变后的值";
   }
 
   ngOnInit(): void {}

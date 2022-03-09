@@ -4,13 +4,12 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:06:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-07 16:15:36
+ * @LastEditTime: 2022-03-08 14:38:05
  */
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { RequestService } from "src/app/services/request.service";
 // 引入服务
 import { StorageService } from "src/app/services/storage.service";
-// 实例化类
-// let storage = new StorageService();
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -18,13 +17,26 @@ import { StorageService } from "src/app/services/storage.service";
 })
 export class HomeComponent implements OnInit {
   @ViewChild("homeHead", { static: true }) homeHead: any;
-  public result: any;
-  // 依赖注入 语法糖写法 相当于在构造器中 实例化对象
-  constructor(public storage: StorageService) {}
-  ngOnInit(): void {}
-  ngAfterViewInit(): void {}
-  receiveSearchInput(e: any) {
-    this.result = e;
-    console.log("接收到的", this.result);
+  public result: any = "";
+  constructor(public storage: StorageService, public request: RequestService) {}
+  // init结尾的函数只会调用一次 checked结尾的函数会多次调用
+  // 初始化组件和指令时调用(一般用于请求api)
+  ngOnInit(): void {
+    const res = this.request.getData();
+    console.log(res);
+    this.receiveRxjsData();
+  }
+  receiveRxjsData() {
+    let res = this.request.getRxjsData();
+    res.subscribe((data) => {
+      console.log("通过rxjs获取的数据", data);
+    });
+    // setTimeout(() => {
+    //   // 取消订阅
+    //   returnRes.unsubscribe();
+    // }, 1000);
+    // setInterval(() => {
+    //   console.log("延迟期触发");
+    // }, 1000);
   }
 }
