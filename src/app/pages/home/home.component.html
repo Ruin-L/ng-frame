@@ -4,25 +4,24 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-03 17:06:15
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-09 14:01:40
+ * @LastEditTime: 2022-03-09 17:37:45
 -->
-<app-head></app-head>
-<hr />
-<div>
-  <p>home work</p>
-  <!-- <p>{{ storage.inputData }}</p> -->
-  <p>{{ result }}</p>
+<div class="home-root">
+  <div class="container">
+    <div class="w">
+      <aside>
+        <ul>
+          <li><a routerLink="/index/body">1</a></li>
+          <li><a routerLink="/index/head">2</a></li>
+          <li><a routerLink="/index/body">1</a></li>
+          <li><a routerLink="/index/head">2</a></li>
+          <li><a routerLink="/index/body">1</a></li>
+          <li><a routerLink="/index/head">2</a></li>
+        </ul>
+      </aside>
+      <section>
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
 </div>
-<app-body></app-body>
-<div class="root">
-  <a routerLink="" routerLinkActive="active">跳转回主页</a>
-
-  <a routerLink="/user" routerLinkActive="active" [queryParams]="{ aid: key }"
-    >跳转</a
-  >
-  <!-- <a >跳转到用户页面</a> -->
-  <!-- <a ></a> -->
-  <!-- <a [routerLink]="['/user']"></a> -->
-</div>
-<!-- <app-news></app-news> -->
-<app-list></app-list>

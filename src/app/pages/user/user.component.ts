@@ -4,7 +4,7 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-04 10:45:56
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-09 13:59:01
+ * @LastEditTime: 2022-03-09 14:50:10
  */
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
@@ -25,7 +25,7 @@ export class UserComponent implements OnInit {
   public list: any;
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      console.log("路由传过来的参数", params);
+      console.log("get接收到的参数", params);
     });
     // this.route.params.subscribe((params) => {
     //   console.log("动态路由路径", params);

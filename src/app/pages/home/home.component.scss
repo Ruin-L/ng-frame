@@ -1,0 +1,33 @@
+.home-root {
+  // height: calc(100vh - 110px);
+  // overflow-y: scroll;
+  .w {
+    display: flex;
+    aside {
+      flex: 3;
+      border-right: 1px solid pink;
+      ul {
+        li {
+          font-size: 16px;
+          // background-color: red;
+
+          border-bottom: 1px solid black;
+          a {
+            display: block;
+            height: 40px;
+            padding: 5px;
+            line-height: 30px;
+            // background-color: red;
+
+            border-bottom: green;
+          }
+        }
+      }
+    }
+
+    section {
+      flex: 7;
+      background-color: yellow;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<!--
+ * @Description: {{ByRuin}}
+ * @Version: 2.0
+ * @Author: Ruin 🍭
+ * @Date: 2022-03-09 15:00:25
+ * @LastEditors: 刘引
+ * @LastEditTime: 2022-03-09 17:24:52
+-->
+<div class="topbar-root">
+  <div class="container">
+    <div class="w">
+      <ul>
+        <li *ngFor="let item of tobMenu; let key = index">
+          <a [routerLink]="item.src" routerLinkActive="active">{{
+            item.title
+          }}</a>
+        </li>
+        <!-- <span>
+          <input type="text" />
+        </span> -->
+      </ul>
+    </div>
+  </div>
+</div>

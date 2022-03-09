@@ -4,18 +4,6 @@
  * @Author: Ruin 🍭
  * @Date: 2022-03-04 10:45:56
  * @LastEditors: 刘引
- * @LastEditTime: 2022-03-09 13:23:58
+ * @LastEditTime: 2022-03-09 15:41:40
 -->
-<p>user works!</p>
-<app-info></app-info>
-<app-mine></app-mine>
-<div class="root">
-  <a routerLink="" routerLinkActive="active">跳转回主页</a>
-
-  <a routerLink="/user" routerLinkActive="active">跳转</a>
-  <button (click)="getApiData()">get请求数据</button>
-  <button (click)="postUserData()">post增加数据</button>
-  <ul>
-    <li *ngFor="let item of list">{{ item.description }}</li>
-  </ul>
-</div>
+<div class="user-root">我是用户页</div>
