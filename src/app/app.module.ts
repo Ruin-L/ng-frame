@@ -15,7 +15,7 @@ import { AppRoutingModule } from "./app-routing.module";
 // 引入根组件
 import { AppComponent } from "./app.component";
 // @ngModule装饰器 @ngModule接受一个元数据对象 告诉angular如何编译和启动对象\
-import { CoreModule } from "./universalModel/core.module";
+import { CoreModule } from "./model/core.module";
 // 在根模块中引入http模块
 import { HttpClientModule } from "@angular/common/http";
 
