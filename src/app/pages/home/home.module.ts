@@ -10,7 +10,7 @@ import { NgModule } from "@angular/core";
 import { HomeComponent } from "./home.component";
 import { HeadComponent } from "./components/head/head.component";
 import { BodyComponent } from "./components/body/body.component";
-import { PublicModule } from "src/app/universalModel/public.module";
+import { PublicModule } from "src/app/model/public.module";
 @NgModule({
   declarations: [HomeComponent, HeadComponent, BodyComponent],
   imports: [PublicModule],
